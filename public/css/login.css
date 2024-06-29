@@ -1,0 +1,82 @@
+
+/* login-container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #92b9e3;
+}
+
+/* login-form-container */
+.login-form-container {
+    
+    padding: 40px; /* Tăng padding cho thoáng hơn */
+    border-radius: 15px; /* Bo tròn góc lớn hơn */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nổi bật hơn */
+    width: 450px; /* Điều chỉnh độ rộng form */
+    margin:auto;
+}
+
+  .login-form-container h2 {
+    text-align: center;
+    font-size: 2.2rem;  /* Tăng kích thước tiêu đề */
+    font-weight: 600;   /* Tăng độ đậm */
+    margin-bottom: 30px; /* Khoảng cách giữa tiêu đề và form */
+    color: #343a40; /* Màu xám đậm */
+  }
+
+  /* form-group */
+  .form-group {
+    margin-bottom: 20px; /* Tăng khoảng cách giữa các nhóm */
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px; /* Khoảng cách giữa label và input */
+    font-weight: 500;  /* Tăng độ đậm của label */
+  }
+
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    width: 100%;
+    padding: 12px; /* Tăng padding cho input */
+    border: 1px solid #ced4da; /* Viền xám nhạt hơn */
+    border-radius: 8px;  /* Bo tròn góc input */
+    box-sizing: border-box; /* Để padding không làm input bị tràn ra ngoài */
+  }
+
+  /* btn-login */
+  .btn-login {
+    background-color: #2d99ae; /* Màu xanh */
+    color: white;
+    padding: 12px 25px; /* Tăng padding cho button */
+    border: none;
+    border-radius: 10px;  /* Bo tròn góc button lớn hơn */
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;   /* Tăng kích thước chữ */
+    font-weight: 500;
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
+  }
+
+  .btn-login:hover {
+    background-color: #0056b3; /* Màu xanh đậm hơn khi hover */
+  }
+
+  /* forgot-password */
+  .forgot-password a {
+    color: #6c757d;  /* Màu xám đậm cho liên kết "Quên mật khẩu" */
+    text-decoration: none;
+  }
+
+  .forgot-password a:hover {
+    text-decoration: underline;
+  }
+
+  /* register-link */
+  .register-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem; /* Thu nhỏ chữ của liên kết đăng ký */
+  }
