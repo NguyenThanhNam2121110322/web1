@@ -1,6 +1,10 @@
 @extends('layouts.site')
 @section('content')
-
+<div class="product-section">
+    <h2 class="section-title">
+        <span class="px-2">Products Detail</span>
+    </h2>
+</div>
      {{--  --}}
         <div class="container my-5">
             <div class="row">

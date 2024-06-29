@@ -5,7 +5,9 @@ use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\frontend\ProductController as SanphamController;
 use App\Http\Controllers\frontend\ContactController as LienheController;
 use App\Http\Controllers\frontend\CartController;
+use App\Http\Controllers\frontend\PostController as BaivietController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SearchController;
 
 //admin
 
@@ -42,6 +44,10 @@ Route::get('thanh-toan', [CartController::class, 'checkout'])->name('site.cart.c
 Route::get('dang-nhap', [AuthController::class, 'getlogin'])->name('website.getlogin');
 Route::post('dang-nhap', [AuthController::class, 'dologin'])->name('website.doLogin');
 Route::get('dang-xuat', [AuthController::class, 'logout'])->name('website.logout');
+
+//tim kiem
+Route::post('tim-kiem', [SearchController::class, 'search'])->name('search.search');
+Route::get('tim-kiem', [SearchController::class, 'index'])->name('search.index');
 
 //Product Category
 Route::get('danh-muc/{slug}', [SanPhamController::class, 'category'])->name('site.product.category');

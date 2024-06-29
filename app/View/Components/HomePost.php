@@ -5,15 +5,16 @@ namespace App\View\Components;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use App\Models\Post;
 
-class Post extends Component
+class HomePost extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct($postitem)
+    public function __construct()
     {
-        $this->post_row=$postitem;
+        //
     }
 
     /**
@@ -21,7 +22,10 @@ class Post extends Component
      */
     public function render(): View|Closure|string
     {
-        $post = $this->post_row;
-        return view('components.post', compact('post'));
+        $post=Post::where('status', '=', 1)
+        ->orderBy('created_at','desc')
+        ->limit(3)
+        ->get();
+        return view('components.home-post', compact('post'));
     }
 }
